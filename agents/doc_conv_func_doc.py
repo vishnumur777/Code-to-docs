@@ -38,25 +38,14 @@ async def doc_conversion(repository_info: str) -> dict:
         You are a technical documentation expert. Using the provided code analysis and repository context,
         generate comprehensive documentation in markdown format that includes:
 
-        1. Project Overview:
-           - High-level description
-           - Key features and functionality
-           - Technologies and dependencies used
+        1. Function/Class Descriptions
 
-        2. Code Documentation:
-           - Detailed explanation of classes and functions
-           - Parameters, return types, and usage examples
-           - Code architecture and design patterns
+        which contains function names, parameters, return types, and brief descriptions.
 
-        3. Setup and Installation:
-           - Prerequisites
-           - Installation steps
-           - Configuration requirements
+        2. Usage Examples
 
-        4. Usage Guide:
-           - Basic usage examples
-           - Common use cases
-           - Best practices
+        Provide clear examples of how to use the main functions/classes.
+
 
         Format the documentation in clear markdown with proper headings, code blocks, and sections.
         Focus on clarity, completeness, and technical accuracy.
