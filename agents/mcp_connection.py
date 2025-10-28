@@ -12,7 +12,7 @@ async def mcp_connection_from_server():
         {
             "github": {
                 "transport": "streamable_http",
-                "url": "http://localhost:8000/mcp/",
+                "url": "http://localhost:8002/mcp/",
                 "headers": {
                     "Content-Type": "application/json"
                 }

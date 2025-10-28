@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from dotenv import load_dotenv
 import requests
 import os
@@ -7,6 +7,8 @@ import ast
 load_dotenv()
 
 mcp = FastMCP("GitHub-Content")
+os.environ["MCP_HTTP_HOST"] = "127.0.0.1"
+os.environ["MCP_HTTP_PORT"] = "8002"
 
 @mcp.tool()
 def search_repo_github(repo: str, query: str) -> list:
@@ -115,5 +117,7 @@ def get_file_content_local(file_path: str) -> str:
     with open(file_path, 'r') as file:
         return file.read()
 
+
+
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="http", host="127.0.0.1", port=8002)
